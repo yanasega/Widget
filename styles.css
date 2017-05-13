@@ -75,7 +75,8 @@ section.detailsec {
 	width:19%;
 	float: left;
 	text-align: center;
-	padding: 5px;	 
+	padding: 5px;	
+	box-sizing: border-box;	
 }
 
 p.simpletext{
