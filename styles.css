@@ -37,6 +37,8 @@
 div{
 	-webkit-transition: all .5s ease-in-out;
     -moz-transition: all .5s ease-in-out;
+	-ms-transition: all .5s ease-in-out;
+	-o-transition: all .5s ease-in-out;
 }
 .smalldiv {
 	float:left;
@@ -80,6 +82,7 @@ p.simpletext{
 	font-weight: bold;
 	margin-top: 10px;
 	margin-bottom:3px;
+	color: black;
 }
 p + p{
 	color:gray;

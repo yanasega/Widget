@@ -1,44 +1,49 @@
 
 var move = "-100px";
 var sliderLimit = -80;
+var element;
+var style;
+var currentPosition;
+
+function changeArrow(arrow,content){
+	document.getElementById(arrow).style.display = content;
+}
 
 function moveright(){
-	var element = document.getElementById('maindiv');
-    style = window.getComputedStyle(element);
-	var currentPosition = parseInt(style.getPropertyValue('left'));
+	currentPosition = parseInt(style.getPropertyValue('left'));
     if (currentPosition >= sliderLimit){
-		document.getElementById("leftArrow").style.display = "block";
+		changeArrow("leftArrow","block");
 		if(element.style.left){
 			element.style.left = String(parseInt(element.style.left) - 100) + "px";
 			if (currentPosition >= sliderLimit){
-				document.getElementById("rightArrow").style.display = "none";
+				changeArrow("rightArrow","none");
 			}
 		}
 		else{
 			element.style.left = move;
-			document.getElementById("rightArrow").style.display = "none";
+			changeArrow("rightArrow","none");
 		}
 	} 
 }
 
 function moveleft(){
-	var element = document.getElementById('maindiv');
-    style = window.getComputedStyle(element);
-	var currentPosition = parseInt(style.getPropertyValue('left'));
+	currentPosition = parseInt(style.getPropertyValue('left'));
     if (currentPosition < 0){
-		document.getElementById("rightArrow").style.display = "block";
+		changeArrow("rightArrow","block");
 		if(element.style.left){			
 			element.style.left = String(parseInt(element.style.left) +100) + "px";
 		}
 		if (currentPosition < 0){
-			document.getElementById("leftArrow").style.display = "none";
+			changeArrow("leftArrow","none");
 		}
 	} 
 	else{
-		document.getElementById("leftArrow").style.display = "none";
+		changeArrow("leftArrow","none");
 	}
 }
 
 window.onload = function(){
+	element = document.getElementById('maindiv');
+	style = window.getComputedStyle(element);
 	document.getElementById("leftArrow").style.display = "none";
 }
