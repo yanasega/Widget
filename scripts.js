@@ -3,7 +3,7 @@ var move = "-100px";
 var sliderLimit = -80;
 
 function moveright(){
-	var element = document.getElementById('tslshow');
+	var element = document.getElementById('maindiv');
     style = window.getComputedStyle(element);
 	var currentPosition = parseInt(style.getPropertyValue('left'));
     if (currentPosition >= sliderLimit){
@@ -22,7 +22,7 @@ function moveright(){
 }
 
 function moveleft(){
-	var element = document.getElementById('tslshow');
+	var element = document.getElementById('maindiv');
     style = window.getComputedStyle(element);
 	var currentPosition = parseInt(style.getPropertyValue('left'));
     if (currentPosition < 0){
