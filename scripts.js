@@ -46,4 +46,11 @@ window.onload = function(){
 	element = document.getElementById('maindiv');
 	style = window.getComputedStyle(element);
 	document.getElementById("leftArrow").style.display = "none";
+	console.log(document.getElementById('bank').height);
+	var e = document.getElementById('bank').height;
+	document.getElementById('rightArrow').style.height = e + "px";
+	document.getElementById('leftArrow').style.height = e + "px";
+	document.getElementById('rightArrow').style.lineHeight  = e + "px";
+	document.getElementById('leftArrow').style.lineHeight  = e + "px";
+	console.log(document.getElementById('rightArrow').style.height );
 }
