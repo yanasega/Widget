@@ -2,7 +2,6 @@
 /* scrollbar */
 .bstimeslider {  
 	height: 350px;
-	/* background:#ccc; */
 	position:relative; 
 
 }
@@ -33,22 +32,17 @@
 #rightArrow {
 	right:0px;
 }
+
+/* mycontainers */
 div{
 	-webkit-transition: all .5s ease-in-out;
     -moz-transition: all .5s ease-in-out;
 }
 .bktibx {
-    
 	float:left;
 	display:block;
 	margin:10px 0 0 0 ;
 	margin-left: 8px;
-/* margin:0 40px 0 0 ; */
-/* font-size:18px; */
-/* width:60px; */
-/* background:#000; */
-/* color:#fff; */
-    
 }
 
 #tslshow {
@@ -64,6 +58,42 @@ div{
     position: absolute;
     overflow: hidden;
 }
+
+img.imgclass {
+	box-shadow: 1px 1px 10px #999;
+	width: 100%;
+	cursor: pointer;
+
+}
+
+section.detailsec {
+	width:19%;
+	float: left;
+	text-align: center;
+	padding: 5px;	 
+}
+
+p.simpletext{
+	font-family: "Verdana";
+	width: 95%;
+	text-align: left;
+	font-weight: bold;
+	margin-top: 10px;
+	margin-bottom:3px;
+}
+p + p{
+	color:gray;
+	font-family: "Verdana";
+	width: 95%;
+	text-align: left;
+	font-weight: bold;
+	font-size:10px;
+}
+p.header{
+	font-family: "Verdana";
+}
+
+/* smoothtransition */
 .imageDiv img { 
 	box-shadow: 1px 1px 10px #999; 
 	margin: 2px;
@@ -111,37 +141,17 @@ div{
     -ms-transition: transform .2s ease, z-index 0s;
     -o-transition: transform .2s ease, z-index 0s;
 }
-img.imgclass {
-	box-shadow: 1px 1px 10px #999;
-	width: 100%;
 
+.transition:hover p+p {
+	transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    z-index: 10;
+    transition: transform .2s ease, z-index 0s;
+    -moz-transition: transform .2s ease, z-index 0s;
+    -webkit-transition: transform .2s ease, z-index 0s;
+    -ms-transition: transform .2s ease, z-index 0s;
+    -o-transition: transform .2s ease, z-index 0s;
 }
-
-section.detailsec {
-	width:19%;
-	float: left;
-	text-align: center;
-	padding: 5px;	 
-}
-
-p.simpletext{
-	font-family: "Verdana";
-	width: 95%;
-	text-align: left;
-	font-weight: bold;
-	margin-top: 10px;
-	margin-bottom:3px;
-}
-p + p{
-	color:gray;
-	font-family: "Verdana";
-	width: 95%;
-	text-align: left;
-	font-weight: bold;
-	font-size:10px;
-}
-p.header{
-	font-family: "Verdana";
-}
-
 
